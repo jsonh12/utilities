@@ -56,7 +56,4 @@ def twoWayConverterV3(TempValue=0, TempType='KtoC'):
         Result = ((TempValue - 32) / 1.8 + 273.15)
     else:
         print("Conversion not supported!")
-    
     print(Result)
-
-
