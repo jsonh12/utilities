@@ -1,5 +1,5 @@
 import pytest
-from * import temp_converter
+from temp_converter import test_convertCtoF
 
 def test_convertCtoF():
     assert convertCtoF(265) == 4
