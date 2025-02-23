@@ -50,9 +50,9 @@ def twoWayConverterV3(TempValue=0, TempType='KtoC'):
 		Result = (TempValue - 32)/(9/5)
 	elif(TempType == 'KtoC'):
 		Result = (TempValue - 273.15)
-	elif(Temptype == 'CtoK'):
+	elif(TempType == 'CtoK'):
 		Result = (TempValue + 273.15)
-	elif(Temptype == 'KtoF'):
+	elif(TempType == 'KtoF'):
 	        Result = ( 1.8 * (TempValue - 273.15) + 32)
 	# elif(Temptype == 'FtoK'):
 	#	Result = ()	
