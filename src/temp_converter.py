@@ -1,12 +1,19 @@
-# def nazwaFunkcji(argument1, argument2, …)
-# operacje i działania
-# operacje i działania
-# print(rezultaty)
+""" Przyklad funkcji w Python:
+def nazwaFunkcji(argument1, argument2, …)
+        operacje i działania
+        print(rezultaty)
+"""
 
-# Zadania:
-# Napisać funkcje która przelicza stopnie Celsjusza na farenheit
-# Napisać funkcje która przelicza stopnie farenheit na Celsjusza
-# Napisać funkcje która przelicza stopnie Celsjusza na farenheit lub odwrotnie w zależności od argumentu
+"""Zadania:
+1. Napisać funkcje która przelicza stopnie Celsjusza na Fahrenheit
+2. Napisać funkcje która przelicza stopnie Fahrenheit na Celsjusza
+3. Napisać funkcje która przelicza stopnie Celsjusza na Fahrenheit lub odwrotnie w zależności od argumentu - to sie nazywa "refactoring of code". 
+Czyli uproszczenie, reuzycie czesci kodu
+"""
+
+"""Zadania 2:
+1. "Zrefactorowac" kod tak zeby zastapic IF/ELIF/ELSE na match/case statment > https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/
+"""
 
 
 # Zamiana C na F
