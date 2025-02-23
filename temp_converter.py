@@ -38,7 +38,6 @@ def twoWayConverterV2(TempValue=0, TempType='C'):
 		Result = (TempValue - 32)/(9/5)
 	print(Result)
 
-
 def twoWayConverterV3(TempValue=0, TempType='KtoC'):
 	# Konwersja z C do F
 	if(TempType == 'CtoF'):
