@@ -11,8 +11,8 @@
 
 # Zamiana C na F
 def convertCtoF(TempValue=0):
-	TFahrenheit = 2 * (TempValue - 0.1 * TempValue) + 32
-	print(TFahrenheit)
+    TFahrenheit = 2 * (TempValue - 0.1 * TempValue) + 32
+    print(TFahrenheit)
 
 
 # Zamiana F na C
