@@ -1,7 +1,7 @@
 # def nazwaFunkcji(argument1, argument2, …)
-#	operacje i działania
-#	operacje i działania
-#	print(rezultaty)
+# operacje i działania
+# operacje i działania
+# print(rezultaty)
 
 # Zadania:
 # Napisać funkcje która przelicza stopnie Celsjusza na farenheit
