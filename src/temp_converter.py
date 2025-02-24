@@ -12,7 +12,13 @@ Czyli uproszczenie, reuzycie czesci kodu
 """
 
 """Zadania 2:
+2. Dodac komentarze do kodu
+3. Dodac do printow jednostke temperatury wynikowej i ladny tekst w stylu: "Temperatura na wejsciu: 21 [C] > Temperatura po przeliczeniu: 68.9 [F]." > https://www.w3schools.com/python/python_string_formatting.asp
+"""
+
+""" Zadanie 3:
 1. "Zrefactorowac" kod tak zeby zastapic IF/ELIF/ELSE na match/case statment > https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/
+
 """
 
 
@@ -65,3 +71,12 @@ def twoWayConverterV3(TempValue=0, TempType='KtoC'):
     else:
         print("Conversion not supported!")
     print(Result)
+
+
+# Wywolanie funkcji
+
+convertCtoF(21)
+convertFtoC(68)
+twoWayConverter(68, 'F')
+twoWayConverterV2(21, 'C')
+twoWayConverterV3(345, 'KtoC')
