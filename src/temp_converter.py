@@ -76,7 +76,7 @@ def twoWayConverterV3(TempValue=0, TempType='KtoC'):
 # Wywolanie funkcji
 
 convertCtoF(21)
-convertFtoC(68)
-twoWayConverter(68, 'F')
+convertFtoC(68.8)
+twoWayConverter(68.8, 'F')
 twoWayConverterV2(21, 'C')
 twoWayConverterV3(345, 'KtoC')
