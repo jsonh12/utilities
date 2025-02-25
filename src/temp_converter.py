@@ -53,30 +53,37 @@ def twoWayConverterV2(TempValue=0, TempType='C'):
         Result = (TempValue - 32)/(9/5)
     print(Result)
 
-
-def twoWayConverterV3(TempValue=0, TempType='KtoC'):
-    # Konwersja z C do F
-    if (TempType == 'CtoF'):
+# Funkcja która przelicza temperature z jednej do drugiej.
+def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
+    # Konwersja z Celcjusza  do Fahrenheita
+    if (TempInType == 'C') & (TempOutType == 'F'):
         Result = 2 * (TempValue - 0.1 * TempValue) + 32
-    elif (TempType == 'FtoC'):
+    # Konwersja z Fahrenheita na Celcjusza
+    elif (TempInType == 'F') & (TempOutType == 'C'):   
         Result = (TempValue - 32) / (9/5)
-    elif (TempType == 'KtoC'):
+     # Konwersja z Kelwina do Celcjusza
+    elif (TempInType == 'K') & (TempOutType == 'C'):
         Result = (TempValue - 273.15)
-    elif (TempType == 'CtoK'):
+    #Konwersja z Celcjusza do Kelvina
+    elif (TempInType == 'C') & (TempOutType == 'K'):
         Result = (TempValue + 273.15)
-    elif (TempType == 'KtoF'):
+    #Konwersja z Kelvina do Fahrenheita
+    elif (TempInType == 'K') & (TempOutType == 'F'):
         Result = (1.8 * (TempValue - 273.15) + 32)
-    elif (TempType == 'FtoK'):
+    #Konwersja z Fahrenheita do Kelvina
+    elif (TempInType == 'F') & (TempOutType == 'K'):
         Result = ((TempValue - 32) / 1.8 + 273.15)
+    # Jeśli inna litera wpisana niz w programie napisz, ze nie moze zkalkulowac
     else:
         print("Conversion not supported!")
-    print(Result)
+    print(f'Temperatura wejsciowa {TempValue} [{TempInType}] - Temperatura wyjsciowa/ rezultat {Result} [{TempOutType}].')
 
 
 # Wywolanie funkcji
 
-convertCtoF(21)
-convertFtoC(69.8)
-twoWayConverter(69.8, 'F')
-twoWayConverterV2(21, 'C')
-twoWayConverterV3(345, 'KtoC')
+# convprint(txt)ertCtoF(21)
+# convertFtoC(69.8)
+# twoWayConverter(69.8, 'F')
+# twoWayConverterV2(21, 'C')
+# twoWayConverterV3(345, 'KtoC')
+twoWayConverterV4(111, 'C', 'F')
