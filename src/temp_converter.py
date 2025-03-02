@@ -17,26 +17,25 @@ Czyli uproszczenie, reuzycie czesci kodu
 """
 
 """ Zadanie 3:
-1. "Zrefactorowac" kod tak zeby zastapic IF/ELIF/ELSE na match/case statment > https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/
-
+1. Napisac nowa funkcje ktora liczy powierzchnie: trojkata, lub kwadratu, lub trapazu, lub kola - o podanych bokach, wysokosci lub promieniu.
 """
 
 
 # Zamiana C na F
-def convertCtoF(TempValue=0):
+def convertCto(TempValue=0):
     TFahrenheit = 2 * (TempValue - 0.1 * TempValue) + 32
     print(TFahrenheit)
     return TFahrenheit
 
 
 # Zamiana F na C
-def convertFtoC(FTemp=0):
+def convertFto(FTemp=0):
     CTemp = (FTemp - 32)/(9/5)
     print(CTemp)
 
 
 # Zamiana C na F lub F na C w jednej funkcji
-def twoWayConverter(TempValue=0, TempType='C'):
+def twoWayConvertr(TempValue=0, TempType='C'):
     if (TempType == 'C'):
         TFahrenheit = 2 * (TempValue - 0.1 * TempValue) + 32
         print(TFahrenheit)
@@ -46,15 +45,17 @@ def twoWayConverter(TempValue=0, TempType='C'):
 
 
 # Zamiana C na F lub F na C w jednej funkcji - refactoring do jednego print'a
-def twoWayConverterV2(TempValue=0, TempType='C'):
+def twoWayConverteV2(TempValue=0, TempType='C'):
     if (TempType == 'C'):
         Result = 2 * (TempValue - 0.1 * TempValue) + 32
     else:
         Result = (TempValue - 32)/(9/5)
     print(Result)
 
+
 # Funkcja która przelicza temperature z jednej do drugiej.
-def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
+
+def twoWayConverter4(TempValue=0, TempInType='K', TempOutType='C'):
     # Konwersja z Celcjusza  do Fahrenheita
     if (TempInType == 'C') & (TempOutType == 'F'):
         Result = 2 * (TempValue - 0.1 * TempValue) + 32
@@ -79,6 +80,20 @@ def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
     print(f'Temperatura wejsciowa {TempValue} [{TempInType}] - Temperatura wyjsciowa/ rezultat {Result} [{TempOutType}].')
 
 
+# Funkcja która liczy powierzchnie Square/Rectangle, Triangle, Trapezoid
+
+def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM'): 
+    if (Shape == 'Square/Rectangle'):
+        Result = (Length * Width)
+    elif (Shape == 'Triangle'):
+        Result = ((Length * Width) / 2)
+    elif (Shape == 'Trapezoid'):
+        Result = (((Length + Width) * Height) / 2)
+    else: 
+        print('A mistake or you are lacking some IQ!') 
+    print(f'The area of the {Shape} is {Result} [{Unit}]')    
+
+
 # Wywolanie funkcji
 
 # convprint(txt)ertCtoF(21)
@@ -86,4 +101,4 @@ def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
 # twoWayConverter(69.8, 'F')
 # twoWayConverterV2(21, 'C')
 # twoWayConverterV3(345, 'KtoC')
-twoWayConverterV4(111, 'C', 'F')
+AreaMeasurer('Triangle',8 , 11, 0, 'CM')
