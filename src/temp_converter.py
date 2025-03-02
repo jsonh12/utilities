@@ -82,7 +82,7 @@ def twoWayConverter4(TempValue=0, TempInType='K', TempOutType='C'):
 
 # Funkcja która liczy powierzchnie Square/Rectangle, Triangle, Trapezoid
 
-def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM'): 
+def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM2'): 
     if (Shape == 'Square/Rectangle'):
         Result = (Length * Width)
     elif (Shape == 'Triangle'):
@@ -101,4 +101,4 @@ def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM'):
 # twoWayConverter(69.8, 'F')
 # twoWayConverterV2(21, 'C')
 # twoWayConverterV3(345, 'KtoC')
-AreaMeasurer('Triangle',8 , 11, 0, 'CM')
+AreaMeasurer('Square/Rectangle',8 , 11, 10, 'CM2')
