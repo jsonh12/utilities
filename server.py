@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from file.py import twoWayConverterV2, AreaMeasurer
+from src.temp_converter import twoWayConverterV2, AreaMeasurer
 
 
 app = Flask(__name__)
