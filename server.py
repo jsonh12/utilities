@@ -1,24 +1,19 @@
-from flask import Flask, render_template
-from src.temp_converter import twoWayConverterV4, AreaMeasurer
-
+from flask import Flask, render_template, request
+from temp_converter import twoWayConverterV4
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template('index.html')
+    return render_template('temp.html')
 
-@app.route('/temp')
-def temp():
-  result = twoWayConverterV4(21, 'C')
-  print(result)
-  return result
-
-@app.route('/measure')
-def measure():
-  result = AreaMeasurer('Triangle', 8, 9,'CM')
-  print(result)
-  return result
+@app.route('/convert', methods=['POST'])
+def convert():
+    temp_value = float(request.form['temp_value'])
+    temp_in_type = request.form['temp_in_type']
+    temp_out_type = request.form['temp_out_type']
+    result = twoWayConverterV4(temp_value, temp_in_type, temp_out_type)
+    return render_template('temp.html', result=result)
 
 if __name__ == '__main__':
-  app.run(debug=True)
+    app.run(debug=True)

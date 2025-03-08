@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form action="/convert" method="post">
+        <label for="temp_value">Temperature Value:</label>
+        <input type="number" id="temp_value" name="temp_value" step="0.01" required>
+        <br>
+        <label for="temp_in_type">Input Temperature Type:</label>
+        <select id="temp_in_type" name="temp_in_type" required>
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+        <br>
+        <label for="temp_out_type">Output Temperature Type:</label>
+        <select id="temp_out_type" name="temp_out_type" required>
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+        <br>
+        <button type="submit">Convert</button>
+    </form>
+    {% if result %}
+        <h2>Conversion Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
+
