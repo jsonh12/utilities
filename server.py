@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('pages/temp.html')
+    return render_template('templates/pages/temp.html')
 
 @app.route('/convert', methods=['POST'])
 def convert():
@@ -13,7 +13,7 @@ def convert():
     temp_in_type = request.form['temp_in_type']
     temp_out_type = request.form['temp_out_type']
     result = twoWayConverterV4(temp_value, temp_in_type, temp_out_type)
-    return render_template('pages/temp.html', result=result)
+    return render_template('templates/pages/temp.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
