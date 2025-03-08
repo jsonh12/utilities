@@ -55,7 +55,7 @@ def twoWayConverteV2(TempValue=0, TempType='C'):
 
 # Funkcja która przelicza temperature z jednej do drugiej.
 
-def twoWayConverter4(TempValue=0, TempInType='K', TempOutType='C'):
+def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
     # Konwersja z Celcjusza  do Fahrenheita
     if (TempInType == 'C') & (TempOutType == 'F'):
         Result = 2 * (TempValue - 0.1 * TempValue) + 32
@@ -100,5 +100,4 @@ def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM2'):
 # convertFtoC(69.8)
 # twoWayConverter(69.8, 'F')
 # twoWayConverterV2(21, 'C')
-# twoWayConverterV3(345, 'KtoC')
-AreaMeasurer('Square/Rectangle',8 , 11, 10, 'CM2')
+AreaMeasurer(Shape='Triangle', 8, 9,'CM')
