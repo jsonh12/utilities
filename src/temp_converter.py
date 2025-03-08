@@ -22,20 +22,20 @@ Czyli uproszczenie, reuzycie czesci kodu
 
 
 # Zamiana C na F
-def convertCto(TempValue=0):
+def convertCtoF(TempValue=0):
     TFahrenheit = 2 * (TempValue - 0.1 * TempValue) + 32
     print(TFahrenheit)
     return TFahrenheit
 
 
 # Zamiana F na C
-def convertFto(FTemp=0):
+def convertFtoC(FTemp=0):
     CTemp = (FTemp - 32)/(9/5)
     print(CTemp)
 
 
 # Zamiana C na F lub F na C w jednej funkcji
-def twoWayConvertr(TempValue=0, TempType='C'):
+def twoWayConverter(TempValue=0, TempType='C'):
     if (TempType == 'C'):
         TFahrenheit = 2 * (TempValue - 0.1 * TempValue) + 32
         print(TFahrenheit)
@@ -45,7 +45,7 @@ def twoWayConvertr(TempValue=0, TempType='C'):
 
 
 # Zamiana C na F lub F na C w jednej funkcji - refactoring do jednego print'a
-def twoWayConverteV2(TempValue=0, TempType='C'):
+def twoWayConverterV2(TempValue=0, TempType='C'):
     if (TempType == 'C'):
         Result = 2 * (TempValue - 0.1 * TempValue) + 32
     else:
