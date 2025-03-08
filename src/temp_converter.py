@@ -76,8 +76,8 @@ def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
         Result = ((TempValue - 32) / 1.8 + 273.15)
     # Jeśli inna litera wpisana niz w programie napisz, ze nie moze zkalkulowac
     else:
-        print("Conversion not supported!")
-    print(f'Temperatura wejsciowa {TempValue} [{TempInType}] - Temperatura wyjsciowa/ rezultat {Result} [{TempOutType}].')
+        return "Conversion not supported!"
+    return f'Temperatura wejsciowa {TempValue} [{TempInType}] - Temperatura wyjsciowa/ rezultat {Result} [{TempOutType}].'
 
 
 # Funkcja która liczy powierzchnie Square/Rectangle, Triangle, Trapezoid
@@ -100,4 +100,4 @@ def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM2'):
 # convertFtoC(69.8)
 # twoWayConverter(69.8, 'F')
 # twoWayConverterV2(21, 'C')
-AreaMeasurer(Shape='Triangle', 8, 9,'CM')
+AreaMeasurer('Triangle', 8, 9,'CM')
