@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/convert', methods=['POST'])
+@app.route('/utilities/convert', methods=['POST'])
 def convert():
     temp_value = float(request.form['temp_value'])
     temp_in_type = request.form['temp_in_type']
