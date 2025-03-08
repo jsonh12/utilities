@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from src.temp_converter import twoWayConverterV2, AreaMeasurer
+from src.temp_converter import twoWayConverterV4, AreaMeasurer
 
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ def index():
 
 @app.route('/temp')
 def temp():
-  result = twoWayConverterV2(21, 'C')
+  result = twoWayConverterV4(21, 'C')
   print(result)
   return result
 
