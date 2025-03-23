@@ -3,9 +3,6 @@
 ## 1. FizzBuzz
 Write a program that:
 - Prints numbers from 1 to 50.
-- For multiples of 3, print "Fizz".
-- For multiples of 5, print "Buzz".
-- For multiples of both 3 and 5, print "FizzBuzz".
 
 **Why It's Fun**: Teaches loops, conditionals, and logic!  
 [Learn more about loops and conditionals in Python](https://www.w3schools.com/python/python_conditions.asp)
