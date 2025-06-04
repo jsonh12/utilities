@@ -62,16 +62,16 @@ def twoWayConverterV4(TempValue=0, TempInType='K', TempOutType='C'):
     # Konwersja z Fahrenheita na Celcjusza
     elif (TempInType == 'F') & (TempOutType == 'C'):   
         Result = (TempValue - 32) / (9/5)
-     # Konwersja z Kelwina do Celcjusza
+    # Konwersja z Kelwina do Celcjusza
     elif (TempInType == 'K') & (TempOutType == 'C'):
         Result = (TempValue - 273.15)
-    #Konwersja z Celcjusza do Kelvina
+    # Konwersja z Celcjusza do Kelvina
     elif (TempInType == 'C') & (TempOutType == 'K'):
         Result = (TempValue + 273.15)
-    #Konwersja z Kelvina do Fahrenheita
+    # Konwersja z Kelvina do Fahrenheita
     elif (TempInType == 'K') & (TempOutType == 'F'):
         Result = (1.8 * (TempValue - 273.15) + 32)
-    #Konwersja z Fahrenheita do Kelvina
+    # Konwersja z Fahrenheita do Kelvina
     elif (TempInType == 'F') & (TempOutType == 'K'):
         Result = ((TempValue - 32) / 1.8 + 273.15)
     # Jeśli inna litera wpisana niz w programie napisz, ze nie moze zkalkulowac
@@ -100,4 +100,5 @@ def AreaMeasurer (Shape='Triangle', Length=0, Width=0, Height=0, Unit='CM2'):
 # convertFtoC(69.8)
 # twoWayConverter(69.8, 'F')
 # twoWayConverterV2(21, 'C')
+# twoWayConverterV4(20, 'K', 'C')
 AreaMeasurer('Triangle', 8, 9,'CM')
